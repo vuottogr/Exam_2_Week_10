@@ -3,7 +3,7 @@
 # successful
 def main():
     # when you have initialized your object, use the calls below to test
-    #run_test_init()
+    run_test_init()
     #run_test_withdraw()
     return
 
@@ -46,6 +46,16 @@ class Bank(object):
           :type balance: float
           :type account_number: str
         """
+
+        self.name = name
+        self.initial_deposit = initial_deposit
+        self.account_number = account_number
+
+    def __repr(self):
+        value = self.name + ' ' + str(self.initial_deposit) + ' ' + str(self.account_number)
+        return value
+
+
     # ---------------------------------------------------------------------
     # TODO: 1. Implement and test instances of this class.
     #     See the testing code (scroll down near bottom) for more examples.
